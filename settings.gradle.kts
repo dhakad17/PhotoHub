@@ -1,3 +1,3 @@
 rootProject.name = "PhotoHub"
 
-include("model-service")
+include("model-service","auth-service")

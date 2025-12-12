@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: model-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/photohub
+    username: rohit
+    password: 1234qwer
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
