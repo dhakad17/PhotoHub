@@ -31,4 +31,8 @@ public class User {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private LocalDateTime deletedAt;
+
+    // OTP fields
+    private String otp;
+    private LocalDateTime otpExpiry;
 }
