@@ -7,37 +7,32 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "media")
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Media {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long mediaId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    @Column(name = "user_id", nullable = false)
+    private Long userId;
 
-    @Column(columnDefinition = "TEXT")
-    private String fileUrl;
+    @Column(name = "album_id")
+    private Long albumId;
 
-    @Column(columnDefinition = "TEXT")
-    private String thumbnailUrl;
+    @Column(name = "media_url", columnDefinition = "TEXT")
+    private String mediaUrl;
 
-    private String mimeType;
+    @Column(name = "media_type")
+    private String mediaType;
+
+    @Column(name = "uploaded_at")
+    private LocalDateTime uploadedAt;
+
+    @Column(name = "size_bytes")
     private Long sizeBytes;
-
-    private Integer width;
-    private Integer height;
-
-    private LocalDateTime createdAt;
-    private LocalDateTime takenAt;
-
-    private String cameraModel;
-
-    private Double locationLat;
-    private Double locationLng;
-
-    @Enumerated(EnumType.STRING)
-    private MediaStatus status;
 }

@@ -1,0 +1,51 @@
+> Task :model-service:compileJava UP-TO-DATE
+> Task :model-service:processResources UP-TO-DATE
+> Task :model-service:classes UP-TO-DATE
+> Task :model-service:jar UP-TO-DATE
+> Task :media-service:compileJava
+> Task :media-service:processResources UP-TO-DATE
+> Task :media-service:classes
+> Task :media-service:resolveMainClassName
+
+> Task :media-service:bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-12-14T18:02:08.235+05:30  INFO 869528 --- [media-service] [           main] c.p.m.MediaServiceApplication            : Starting MediaServiceApplication using Java 21.0.9 with PID 869528 (/home/zerone/IdeaProjects/PhotoHub/media-service/build/classes/java/main started by zerone in /home/zerone/IdeaProjects/PhotoHub/media-service)
+2025-12-14T18:02:08.237+05:30  INFO 869528 --- [media-service] [           main] c.p.m.MediaServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-12-14T18:02:08.449+05:30  INFO 869528 --- [media-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-14T18:02:08.476+05:30  INFO 869528 --- [media-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+2025-12-14T18:02:08.812+05:30  INFO 869528 --- [media-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-12-14T18:02:08.819+05:30  INFO 869528 --- [media-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-14T18:02:08.820+05:30  INFO 869528 --- [media-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-12-14T18:02:08.844+05:30  INFO 869528 --- [media-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-14T18:02:08.844+05:30  INFO 869528 --- [media-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 583 ms
+2025-12-14T18:02:08.923+05:30  INFO 869528 --- [media-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-14T18:02:08.948+05:30  INFO 869528 --- [media-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-12-14T18:02:08.963+05:30  INFO 869528 --- [media-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-14T18:02:09.099+05:30  INFO 869528 --- [media-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-14T18:02:09.112+05:30  INFO 869528 --- [media-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-14T18:02:09.279+05:30  INFO 869528 --- [media-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d37aa0f
+2025-12-14T18:02:09.280+05:30  INFO 869528 --- [media-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-14T18:02:09.302+05:30  WARN 869528 --- [media-service] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-14T18:02:09.724+05:30  INFO 869528 --- [media-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: alter table media modify column media_url TEXT
+Hibernate: alter table users modify column profile_photo_url TEXT
+2025-12-14T18:02:09.779+05:30  INFO 869528 --- [media-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-14T18:02:09.952+05:30  WARN 869528 --- [media-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-14T18:02:09.960+05:30  WARN 869528 --- [media-service] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5254e6dd-4981-49e1-8a39-1c73ec0efa68
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-14T18:02:09.967+05:30  INFO 869528 --- [media-service] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-14T18:02:10.171+05:30  INFO 869528 --- [media-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-12-14T18:02:10.176+05:30  INFO 869528 --- [media-service] [           main] c.p.m.MediaServiceApplication            : Started MediaServiceApplication in 2.127 seconds (process running for 2.305)

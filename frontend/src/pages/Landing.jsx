@@ -5,21 +5,29 @@ function Landing() {
     const navigate = useNavigate();
 
     return (
-        <div className="auth-form" style={{ textAlign: 'center', maxWidth: '500px' }}>
-            <h2>Welcome to PhotoHub</h2>
-            <p>Please select an option to continue</p>
+        <div className="auth-container">
+            <div className="auth-form" style={{ textAlign: 'center' }}>
+                <h2>Welcome to PhotoHub</h2>
+                <p>Your journey to seamless photo sharing starts here</p>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginTop: '30px' }}>
-                <button onClick={() => navigate('/register')} style={{ backgroundColor: '#48bb78' }}>
-                    New User (Register)
-                </button>
-                <div style={{ position: 'relative', margin: '10px 0' }}>
-                    <hr style={{ border: 'none', borderTop: '1px solid #e2e8f0' }} />
-                    <span style={{ position: 'absolute', top: '-10px', left: '50%', transform: 'translateX(-50%)', background: 'white', padding: '0 10px', color: '#718096', fontSize: '14px' }}>OR</span>
+                <div className="landing-buttons">
+                    <button onClick={() => navigate('/register')}>
+                        ✨ New User - Get Started
+                    </button>
+
+                    <div className="divider">
+                        <hr />
+                        <span>OR</span>
+                    </div>
+
+                    <button onClick={() => navigate('/login')}>
+                        🔐 Existing User - Sign In
+                    </button>
                 </div>
-                <button onClick={() => navigate('/login')}>
-                    Existing User (Login)
-                </button>
+
+                <p style={{ marginTop: '30px', fontSize: '13px', color: '#a0aec0' }}>
+                    Secure authentication with OTP verification
+                </p>
             </div>
         </div>
     );
